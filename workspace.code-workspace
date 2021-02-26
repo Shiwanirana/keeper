@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "keeper-client",
+			"name": "client"
+		},
+		{
+			"path": "keeper-server",
+			"name": "server"
+		}
+	],
+	"settings": {}
+}
