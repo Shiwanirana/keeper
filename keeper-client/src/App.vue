@@ -3,10 +3,8 @@
     <Navbar />
   </header>
   <main>
-    <router-view v-slot="{Component}">
-      <transition name="route" mode="out-in">
-        <component :is="Component" />
-      </transition>
+    <router-view >
+
     </router-view>
   </main>
   <footer>
@@ -30,5 +28,7 @@ export default {
 </script>
 <style lang="scss">
 @import "./assets/scss/main.scss";
-
+body{
+font-family: 'Akaya Kanadaka', cursive;
+}
 </style>

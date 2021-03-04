@@ -1,15 +1,15 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark navBar fixed-top ">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-      <div class="d-flex flex-column align-items-center">
+      <div class="d-flex flex-column align-items-center ml-2 m-3">
         <img
           alt="logo"
-          src="../assets/img/cw-logo.png"
+          src="https://p1.hiclipart.com/preview/920/29/225/k-logo.jpg"
           height="45"
         />
       </div>
     </router-link>
-    <button
+    <!-- <button
       class="navbar-toggler"
       type="button"
       data-toggle="collapse"
@@ -19,23 +19,33 @@
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon" />
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link :to="{ name: 'Home' }" class="nav-link">
+    </button> -->
+    <!-- <div class="collapse navbar-collapse" id="navbarText"> -->
+    <!-- <ul class="navbar-nav mr-auto">
+        <li class="nav-item"> -->
+    <!-- <router-link :to="{ name: 'Home' }" class="nav-link">
             Home
-          </router-link>
-        </li>
+          </router-link> -->
+    <div class="input-group ml-5 d-flex justify-content-center">
+      <div class="form-inline">
+        <input type="search" id="form1" class="form-control" placeholder="Search..." />
+        <label class="form-label" for="form1"></label>
+      </div>
+      <button type="button" class="btn btn-light">
+        <i class="fa fa-search text-info"></i>
+      </button>
+    </div>
+    <!-- </li>
         <li class="nav-item">
           <router-link :to="{ name: 'About' }" class="nav-link">
             About
           </router-link>
         </li>
-      </ul>
-      <span class="navbar-text">
+      </ul> -->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <span class="navbar-text text-dark">
         <button
-          class="btn btn-outline-primary text-uppercase"
+          class="btn btn-primary text-uppercase"
           @click="login"
           v-if="!user.isAuthenticated"
         >
@@ -123,5 +133,9 @@ a:hover {
 }
 .nav-item .nav-link.router-link-exact-active{
   color: var(--primary);
+}
+.navBar{
+  box-shadow: 1px 4px 4px grey;
+  background: rgba(84, 240, 190, 0.925);
 }
 </style>
