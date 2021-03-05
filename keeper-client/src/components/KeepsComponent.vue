@@ -174,7 +174,6 @@ background: linear-gradient(90deg, rgba(30,29,29,1) 25%, rgba(162,162,162,1) 55%
  border-radius: 4%;
  box-shadow: 3px 8px , -1em 0 .4em rgb(107, 105, 109);
 flex-direction: row;
-
 }
 .des{
   height: 12vh;

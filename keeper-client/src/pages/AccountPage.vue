@@ -2,7 +2,7 @@
   <div class=" container about text-center mt-5 pt-5">
     <div class="row mt-5">
       <div class="col">
-        <h1>Welcome {{ state.account.name }}</h1>
+        <h1 class="greet">Welcome {{ state.account.name }}</h1>
         <img class="rounded" :src="state.account.picture" alt="" />
         <p>{{ state.account.email }}</p>
       </div>
@@ -63,5 +63,11 @@ export default {
 <style scoped>
 img {
   max-width: 100px;
+}
+.greet{
+   text-shadow: 4px 8px 6px rgb(7, 2, 2);
+   font-size: 7rem;
+   color: rgb(39, 153, 138);
+  /* background: rgba(11, 75, 55, 0.925); */
 }
 </style>

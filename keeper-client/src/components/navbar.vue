@@ -42,10 +42,10 @@
           </router-link>
         </li>
       </ul> -->
-    <div class="collapse navbar-collapse" id="navbarText">
+    <div class="collapse navbar-collapse mr-4" id="navbarText">
       <span class="navbar-text text-dark">
         <button
-          class="btn btn-primary text-uppercase"
+          class="btn btn-primary text-uppercase login"
           @click="login"
           v-if="!user.isAuthenticated"
         >
@@ -63,7 +63,7 @@
               height="40"
               class="rounded"
             />
-            <span class="mx-3">{{ user.name }}</span>
+            <span class="mx-3 text-white">{{ user.name }}</span>
           </div>
           <div
             class="dropdown-menu p-0 list-group w-100"
@@ -135,7 +135,14 @@ a:hover {
   color: var(--primary);
 }
 .navBar{
-  box-shadow: 1px 4px 4px grey;
-  background: rgba(84, 240, 190, 0.925);
+  box-shadow: 10px 10px 8px rgb(7, 2, 2);
+  background: rgba(11, 75, 55, 0.925);
+}
+img{
+  box-shadow: 8px 12px 12px rgb(7, 2, 2);
+}
+.login{
+   box-shadow: 8px 10px 8px rgb(7, 2, 2);
+  background: rgba(40, 134, 104, 0.925);
 }
 </style>

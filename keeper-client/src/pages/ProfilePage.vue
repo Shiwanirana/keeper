@@ -1,8 +1,8 @@
 <template>
-  <div class="container-fluid mt-5 pt-5">
+  <div class="container-fluid m-5 p-5">
     <div class="row mt-3">
       <div class="col text-center">
-        <h1 class="display-2">
+        <h1 class="display-2 greet">
           <b>Welcome</b>
         </h1>
       </div>
@@ -18,12 +18,12 @@
       </div>
     </div>
     <div class="row mt-4">
-      <h2>Vaults: <i class="fa fa-plus text-info" data-toggle="modal" data-target="#vaultId"></i></h2>
+      <h2>Vaults: </h2>
       <vaults-component v-for="v in state.vaults" :key="v.id" :vault-prop="v" />
       <vaults-model />
     </div>
     <div class="row mt-4">
-      <h2>Keeps: <i class="fa fa-plus text-info" data-toggle="modal" data-target="#keepId"></i></h2>
+      <h2>Keeps: </h2>
       <keeps-modal />
       <keeps-component v-for="k in state.keeps" :key="k.id" :keep-prop="k" />
     </div>
@@ -63,6 +63,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.greet{
+   text-shadow: 4px 8px 6px rgb(7, 2, 2);
+   font-size: 10rem;
+   color: rgb(88, 194, 180);
+  /* background: rgba(11, 75, 55, 0.925); */
+}
 </style>
