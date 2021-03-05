@@ -1,21 +1,23 @@
 <template>
-  <div class="masonry keepcomponent card  m-5 brighten zoom" data-toggle="modal" :data-target="'#k' +keepProp.id">
-    <div class=" item row" data-masonry="{&quot;percentPosition&quot;: true }">
-      <img class="img-fluid mainKeep" :src="keepProp.img" />
-      <div class="card-img-overlay row justify-content-between align-items-end text-white align-items-end ">
-        <h3 class="card-title px-2">
-          <i class="fa fa-trash-o fa-2x text-white" v-if="state.vaultKeeps.vaultKeepId && state.account.id === state.vaults.creatorId" aria-hidden="true"></i>
-          {{ keepProp.name }}
-        </h3>
-        <div>
-          <div class="row mr-3">
-            <div class="text-info">
-              <i class="fa fa-user-circle"></i>
-            </div>
+  <!-- <div class="container-fluid mt-5"> -->
+  <div class="keepcomponent card  m-5 brighten zoom" data-toggle="modal" :data-target="'#k' +keepProp.id">
+    <!-- <div class="row" data-masonry="{&quot;percentPosition&quot;: true }"> -->
+    <img class="img-fluid mainKeep" :src="keepProp.img" />
+    <div class="card-img-overlay d-flex justify-content-between align-items-end text-white align-items-end ">
+      <h3 class="card-title px-2">
+        <!-- <i class="fa fa-trash-o fa-2x text-white" v-if="state.vaultKeeps.vaultKeepId && state.account.id === state.vaults.creatorId" aria-hidden="true"></i> -->
+        {{ keepProp.name }}
+      </h3>
+      <div>
+        <div class="row mr-3">
+          <div class="text-info">
+            <i class="fa fa-user-circle"></i>
           </div>
         </div>
+        <!-- </div> -->
       </div>
     </div>
+    <!-- </div> -->
   </div>
   <div class="modal fade"
        :id="'k' + keepProp.id"
@@ -157,20 +159,22 @@ export default {
 
 <style  scoped lang="scss">
 .mainKeep{
-  border-radius: 6%;
-  // height: 300px !important;
-  // width: 300px !important;
+  border-radius: 4%;
+  // height: 200px !important;
+  // width: 200px !important;
 }
 .imgModal{
-  border-radius: 6%;
+  border-radius: 1%;
 }
 .card{
-  height: 200px !important;
-  width: 200px !important;
+  // height: 200px !important;
+  // width: 50px !important;
   background: rgb(30,29,29);
 background: linear-gradient(90deg, rgba(30,29,29,1) 25%, rgba(162,162,162,1) 55%, rgba(35,35,35,0.981127485173757) 85%);
- border-radius: 6%;
+ border-radius: 4%;
  box-shadow: 3px 8px , -1em 0 .4em rgb(107, 105, 109);
+flex-direction: row;
+
 }
 .des{
   height: 12vh;
@@ -197,16 +201,5 @@ transition: all 1s ease;
 .creatorPic{
   height: 30px;
   width: 30px;
-}
-.masonry { /* Masonry container */
-  column-count: 3;
-  column-gap: 1em;
-}
-
-.item { /* Masonry bricks or child elements */
-  // background-color: rgb(206, 205, 205);
-  // display: inline-block;
-  margin: 0 0 0em;
-  width: 100%;
 }
 </style>

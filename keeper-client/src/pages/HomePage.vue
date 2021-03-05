@@ -1,9 +1,7 @@
 <template>
-  <div class="container-fluid">
-    <div id="masonry">
-      <div class=" item row mt-5 pt-5 ">
-        <keeps-component v-for="k in state.keeps" :key="k.id" :keep-prop="k" />
-      </div>
+  <div class="masonry container-fluid mt-5 pt-5">
+    <div class=" item row mt-5 pt-5 ">
+      <keeps-component v-for="k in state.keeps" :key="k.id" :keep-prop="k" />
     </div>
   </div>
 </template>
@@ -50,72 +48,19 @@ html {
 *:after {
   box-sizing: inherit;
 }
-div#masonry {
-display: -ms-flexbox;
--ms-flex-direction: column;
--ms-flex-wrap: wrap;
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-height: 100vw;
-font-size: 0;
-}
-div#masonry keepsComponent {
-width: 33.3%;
-transition: .8s opacity;
-}
-div#masonry:hover keepsComponent {
-opacity: 0.3;
-}
-div#masonry:hover keepsComponent:hover {
-opacity: 1;
+
+.masonry { /* Masonry container */
+  column-count: 4;
+  display: inline-block;
+  // grid-gap: 2em;
+  column-gap: 0.1em;
 }
 
-// .masonry { /* Masonry container */
-//   column-count: 4;
-//   display: inline-block;
-//   // grid-gap: 2em;
-//   column-gap: 1em;
-// }
+.item { /* Masonry bricks or child elements */
+  // background-color: rgb(206, 205, 205);
+  // display: inline-block;
+  margin: 0 0 0em;
+  width: 100%;
+}
 
-// .item { /* Masonry bricks or child elements */
-//   // background-color: rgb(206, 205, 205);
-//   // display: inline-block;
-//   margin: 0 0 0em;
-//   width: 100%;
-// }
-/* The Masonry Container */
-// .masonry {
-//   margin: 1.5em auto;
-//   max-width: 768px;
-//   column-gap: 1.5em;
-// }
-
-// /* The Masonry Brick */
-// .item {
-//   background: #fff;
-//   padding: 1em;
-//   margin: 0 0 1.5em;
-// }
-
-// /* Masonry on large screens */
-// @media only screen and (min-width: 1024px) {
-//   .masonry {
-//     column-count: 4;
-//   }
-// }
-
-// /* Masonry on medium-sized screens */
-// @media only screen and (max-width: 1023px) and (min-width: 768px) {
-//   .masonry {
-//     column-count: 3;
-//   }
-// }
-
-// /* Masonry on small screens */
-// @media only screen and (max-width: 767px) and (min-width: 540px) {
-//   .masonry {
-//     column-count: 2;
-//   }
-// }
 </style>

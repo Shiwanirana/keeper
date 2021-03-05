@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5 pt-5">
+  <div class="container mt-5 pt-5" v-if="state.vault.isPrivate==false">
     <div class="row mt-5 pt-5">
       <div class="col d-flex">
         <h2 class="text-danger">
@@ -21,6 +21,11 @@
     <div class="row">
       <keeps-vault-component v-for="k in state.vaultKeeps" :key="k.id" :keeps-vault-prop="k" />
     </div>
+  </div>
+  <div class="m-5 p-5 " v-else>
+    <button class="btn btn-danger btn-lg m-5 p-5 d-flex justify-content-center" @click="privateVault">
+      Want to access a PRIVATE Valut
+    </button>
   </div>
 </template>
 
@@ -83,6 +88,9 @@ export default {
             )
           }
         })
+      },
+      privateVault() {
+        Swal.fire(' This Vault is PRIVATE...if you want to see whats inside...make it PUBLIC first!!')
       }
     }
   }
