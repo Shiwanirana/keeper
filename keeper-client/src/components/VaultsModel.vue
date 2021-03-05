@@ -82,7 +82,7 @@ export default {
           await vaultsService.createVault(state.newVault)
           logger.log(state.newVault)
           $('#vaultId').modal('hide')
-          state.newVault = ''
+          state.newVault = {}
         } catch (error) {
           logger.error(error)
         }

@@ -88,7 +88,7 @@ export default {
           // logger.log(state.newKeep)
           await keepsService.createKeep(state.newKeep)
           $('#keepId').modal('hide')
-          state.newKeep = ''
+          state.newKeep = {}
         } catch (error) {
           logger.error(error)
         }
