@@ -1,4 +1,7 @@
 <template>
+<div id="back" class="text-info">
+  a
+</div>
   <div class="masonry container-fluid mt-5 pt-5">
     <div class=" item row mt-5 pt-5 ">
       <keeps-component v-for="k in state.keeps" :key="k.id" :keep-prop="k" />
@@ -11,6 +14,7 @@ import { computed, onMounted, reactive } from 'vue'
 import { AppState } from '../AppState'
 import { keepsService } from '../services/KeepsService'
 import { logger } from '../utils/Logger'
+import swal from 'sweetalert2'
 export default {
   name: 'Home',
   setup() {
@@ -24,6 +28,17 @@ export default {
       } catch (error) {
         logger.error(error)
       }
+      // eslint-disable-next-line no-undef
+      swal.fire({
+        title: 'To the Amazing site "Keeper"',
+        text: 'Please Sign-in to make your Vaults and save your Keeps!!',
+        imageUrl: 'https://i.pinimg.com/originals/da/d0/31/dad0312b7d04cc741c5fadd2eac3e0a6.jpg',
+        imageSize: '200x200',
+        background: '#f0f0f0',
+        // background: '#000',
+        // background: '#fff url(https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg)',
+        timer: 4000
+      })
     })
     return { state }
   }
@@ -61,6 +76,20 @@ html {
   // display: inline-block;
   margin: 0 0 0em;
   width: 100%;
+}
+#back {
+  /* width: 100px;
+  height: 50px;
+  background-color: red; */
+  font-weight: bold;
+  position: relative;
+  animation: mymove 40s infinite;
+}
+#back {animation-timing-function: linear;}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 4000px;}
 }
 
 </style>

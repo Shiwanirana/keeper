@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="container-fluid mt-5"> -->
-  <div class="keepcomponent card  m-5 brighten zoom" data-toggle="modal" :data-target="'#k' +keepProp.id">
+  <div class="keepcomponent card m-5 zoom brighten" data-toggle="modal" :data-target="'#k' +keepProp.id">
     <!-- <div class="row" data-masonry="{&quot;percentPosition&quot;: true }"> -->
     <img class="img-fluid mainKeep" :src="keepProp.img" />
     <div class="card-img-overlay d-flex justify-content-between align-items-end text-white align-items-end ">
@@ -150,7 +150,7 @@ export default {
 
         vaultsService.addToVault(state.newVaultKeep)
         // eslint-disable-next-line no-undef
-        swal('Add this Keep successfully to your vault', 'Congratulation', 'success')
+        Swal.fire('Add this Keep successfully to your vault', 'Congratulation', 'success')
       }
     }
   }
@@ -160,8 +160,8 @@ export default {
 <style  scoped lang="scss">
 .mainKeep{
   border-radius: 4%;
-  // height: 200px !important;
-  // width: 200px !important;
+  // height: 900px !important;
+  width: 800px !important;
 }
 .imgModal{
   border-radius: 1%;
@@ -201,4 +201,5 @@ transition: all 1s ease;
   height: 30px;
   width: 30px;
 }
+
 </style>
