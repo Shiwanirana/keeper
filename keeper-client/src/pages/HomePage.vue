@@ -1,7 +1,4 @@
 <template>
-<div id="back" class="text-info">
-  a
-</div>
   <div class="masonry container-fluid mt-5 pt-5">
     <div class=" item row mt-5 pt-5 ">
       <keeps-component v-for="k in state.keeps" :key="k.id" :keep-prop="k" />
@@ -34,8 +31,8 @@ export default {
         text: 'Please Sign-in to make your Vaults and save your Keeps!!',
         imageUrl: 'https://i.pinimg.com/originals/da/d0/31/dad0312b7d04cc741c5fadd2eac3e0a6.jpg',
         imageSize: '200x200',
-        background: '#f0f0f0',
-        // background: '#000',
+        // background: '#f0f0f0',
+        background: '#fff url(https://pub-static.fotor.com/static/web/site/features/backgrounds/images/Fotor-wall-background-image-6.jpg)',
         // background: '#fff url(https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg)',
         timer: 4000
       })
