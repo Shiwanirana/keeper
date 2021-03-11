@@ -1,6 +1,6 @@
 <template>
-  <div class="masonry container-fluid mt-5 pt-5">
-    <div class=" item row mt-5 pt-5 ">
+  <div class=" container-fluid mt-5 pt-5">
+    <div class=" row mt-5 pt-5 ">
       <keeps-component v-for="k in state.keeps" :key="k.id" :keep-prop="k" />
     </div>
   </div>
