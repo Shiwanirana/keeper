@@ -26,17 +26,17 @@ export default {
         logger.error(error)
       }
       // eslint-disable-next-line no-undef
-      swal.fire({
-        title: 'To the Amazing site "Keeper"',
-        text: 'Please Sign-in to make your Vaults and save your Keeps!!',
-        imageUrl: 'https://i.pinimg.com/originals/da/d0/31/dad0312b7d04cc741c5fadd2eac3e0a6.jpg',
-        imageSize: '200x200',
-        // background: '#f0f0f0',
-        background: '#fff url(https://pub-static.fotor.com/static/web/site/features/backgrounds/images/Fotor-wall-background-image-6.jpg)',
-        // background: '#fff url(https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg)',
-        timer: 4000
-      })
-    })
+    //   swal.fire({
+    //     title: 'To the Amazing site "Keeper"',
+    //     text: 'Please Sign-in to make your Vaults and save your Keeps!!',
+    //     imageUrl: 'https://i.pinimg.com/originals/da/d0/31/dad0312b7d04cc741c5fadd2eac3e0a6.jpg',
+    //     imageSize: '200x200',
+    //     // background: '#f0f0f0',
+    //     background: '#fff url(https://pub-static.fotor.com/static/web/site/features/backgrounds/images/Fotor-wall-background-image-6.jpg)',
+    //     // background: '#fff url(https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg)',
+    //     timer: 4000
+    //   })
+    // })
     return { state }
   }
 }
